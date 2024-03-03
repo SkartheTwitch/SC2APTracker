@@ -1147,10 +1147,10 @@
         "codes": "banshee_dampeners, bansheedampeners, bansheecloak, banshee_cloak, banshee_cross_spectrum_dampeners, banshee_cross-spectrum_dampeners, Cross-Spectrum Dampeners (Banshee), Progressive Cross-Spectrum Dampeners (Banshee)"
       },
       {
-        "img": "images/terran_unit_upgrades/cross-spectrum_dampeners_banshee.png"
+        "img": "images/terran_unit_upgrades/cross-spectrum_dampeners_1_banshee.png"
       },
       {
-        "img": "images/terran_unit_upgrades/cloak.png"
+        "img": "images/terran_unit_upgrades/cross-spectrum_dampeners_banshee.png"
       }
     ]
   },
