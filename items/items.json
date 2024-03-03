@@ -241,7 +241,7 @@
     "name": "Planetary Fortress",
     "type": "toggle",
     "loop": "true",
-    "img": "images/terran_building_upgrades/planetary_Fortress.png",
+    "img": "images/terran_building_upgrades/planetary_fortress.png",
     "codes": "planetary_fortress, planetaryfortress, planetary, fortress, Planetary Fortress"
   },
   {
@@ -1477,7 +1477,7 @@
     "codes": "cellular_reactor, cellularreactor, Cellular Reactor"
   },
   {
-    "name": "Regenerative Bio-Steel",
+    "name": "Progressive Regenerative Bio-Steel",
     "type": "progressive",
     "loop": "false",
     "allow_disabled": "false",
@@ -1485,7 +1485,7 @@
       {
         "img": "images/terran_unit_upgrades/regenerative_bio-steel_1.png",
         "img_mods": "@disabled",
-        "codes": "biosteel, bio-steel, regenerative_bio-steel, regenerative_bio_steel, Regenerative Bio-Steel"
+        "codes": "biosteel, bio-steel, regenerative_bio-steel, regenerative_bio_steel, Progressive Regenerative Bio-Steel"
       },
       {
         "img": "images/terran_unit_upgrades/regenerative_bio-steel_1.png"
