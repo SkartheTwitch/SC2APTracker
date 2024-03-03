@@ -1,5 +1,6 @@
 function defenseRating(req, isZerg, hasAir, isAllInGround)
 	local rating = 0
+
 	if Tracker:ProviderCountForCode("Advanced Tactics") > 0 then  -- All defense rating requirements decrease by 2 if Required Tactics is set to Advanced.
 		rating = rating + 2
 	end
@@ -22,19 +23,19 @@ function defenseRating(req, isZerg, hasAir, isAllInGround)
 		if Tracker:ProviderCountForCode("Marine") > 0 or Tracker:ProviderCountForCode("Marauder") > 0 then
 			rating = rating + 3
 		end
-		if Tracker:ProviderCountForCode("Firebat") > 0 and isZerg then
+		if Tracker:ProviderCountForCode("Firebat") > 0 and isZerg == "true" then
 			rating = rating + 2
 		end
 	end
 
 	if Tracker:ProviderCountForCode("Perdition Turret") > 0 then
 		rating = rating + 2
-		if isZerg then
+		if isZerg == "true" then
 			rating = rating + 2
 		end
 	end
 
-	if Tracker:ProviderCountForCode("Missile Turret") > 0 and hasAir then
+	if Tracker:ProviderCountForCode("Missile Turret") > 0 and hasAir == "true" then
 		rating = rating + 2
 	end
 
@@ -53,7 +54,7 @@ function defenseRating(req, isZerg, hasAir, isAllInGround)
 		end
 	end
 
-	if isZerg then
+	if isZerg == "true" then
 		if Tracker:ProviderCountForCode("Hive Mind Emulator") > 0 then
 			rating = rating + 3
 		end
@@ -62,15 +63,14 @@ function defenseRating(req, isZerg, hasAir, isAllInGround)
 		end
 	end
 
-	if isAllInGround then
+	if isAllInGround == "true" then
 		if Tracker:ProviderCountForCode("Banshee") > 0 or Tracker:ProviderCountForCode("Battlecruiser") > 0 then
 			rating = rating + 3
 		end
 	end
 
-	if rating >= req then
+	if rating >= tonumber(req) then
 		return 1
-	end
 	else
 		return 0
 	end
